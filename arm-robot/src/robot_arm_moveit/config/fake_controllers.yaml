@@ -1,0 +1,12 @@
+controller_list:
+  - name: fake_robot_arm_controller
+    joints:
+      - base_link2rotary_plate
+      - rotary_plate2upper_arm
+      - upper_arm2elbow
+      - elbow2forearm
+      - forearm2wrist
+      - wrist2hand
+initial:  # Define initial robot poses.
+  - group: robot_arm
+    pose: zero

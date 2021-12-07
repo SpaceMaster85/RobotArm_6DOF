@@ -1,0 +1,8 @@
+prefix=/media/sf_D_DRIVE/Code/Roboter/arm-robot/devel
+
+Name: robot_arm_moveit
+Description: Description of robot_arm_moveit
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

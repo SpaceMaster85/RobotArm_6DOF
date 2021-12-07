@@ -1,0 +1,8 @@
+prefix=/media/sf_D_DRIVE/Code/Roboter/arm-robot/devel
+
+Name: robot_arm_controller
+Description: Description of robot_arm_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

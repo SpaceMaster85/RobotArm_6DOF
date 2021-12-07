@@ -1,0 +1,8 @@
+prefix=/media/sf_D_DRIVE/Code/Roboter/arm-robot/devel
+
+Name: urdf-1_description
+Description: Description of urdf-1_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

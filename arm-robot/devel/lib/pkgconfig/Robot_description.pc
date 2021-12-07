@@ -1,0 +1,8 @@
+prefix=/media/sf_D_DRIVE/Code/Roboter/arm-robot/devel
+
+Name: Robot_description
+Description: Description of Robot_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

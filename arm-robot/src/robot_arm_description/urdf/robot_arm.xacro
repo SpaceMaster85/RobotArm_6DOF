@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<robot name="robot_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find robot_arm_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find robot_arm_description)/urdf/robot_arm.trans" />
+<xacro:include filename="$(find robot_arm_description)/urdf/robot_arm.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0015594104436249612 2.8977925409056457e-05 0.05085104628518123"/>
+    <mass value="1.496673431049969"/>
+    <inertia ixx="0.003931" ixy="-1e-06" ixz="6.1e-05" iyy="0.002389" iyz="1e-06" izz="0.004691"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="metallic_rot"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rotary_plate_v56_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="9.465792488972738e-06 -3.312755400020366e-16 0.018628033711547344"/>
+    <mass value="1.1935603237404067"/>
+    <inertia ixx="0.003174" ixy="0.0" ixz="0.0" iyy="0.00158" iyz="-0.0" izz="0.004086"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.0408"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/rotary_plate_v56_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="metallic_gelb"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.0408"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/rotary_plate_v56_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="upper_arm_v25_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.0699875552425787e-08 0.034999999999993245 0.1075744084108982"/>
+    <mass value="0.7349961977746811"/>
+    <inertia ixx="0.002182" ixy="0.0" ixz="-0.0" iyy="0.000764" iyz="-0.0" izz="0.001516"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.0351 -0.08672"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/upper_arm_v25_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.0351 -0.08672"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/upper_arm_v25_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="elbow_v35_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.004518466730851467 -0.0255368399833657 0.04648559838231525"/>
+    <mass value="0.5206973731785922"/>
+    <inertia ixx="0.002551" ixy="-1e-06" ixz="-0.000238" iyy="0.002607" iyz="-6e-06" izz="0.00015"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.02545 -0.215379"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/elbow_v35_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.02545 -0.215379"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/elbow_v35_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="forearm_v19_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00016665096632442636 0.0019470165034795363 0.11429447742799315"/>
+    <mass value="0.2601829652267997"/>
+    <inertia ixx="0.000439" ixy="-0.0" ixz="0.0" iyy="0.000433" iyz="-1.4e-05" izz="3.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 8.7e-05 -0.210279"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/forearm_v19_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="metallic_gelb"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 8.7e-05 -0.210279"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/forearm_v19_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wrist_v10_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010994997826987629 -0.01831606477761231 0.05063077304542141"/>
+    <mass value="0.26036754851055777"/>
+    <inertia ixx="7.5e-05" ixy="-1e-06" ixz="1.1e-05" iyy="0.00011" iyz="0.0" izz="8.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.018624 -0.360779"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/wrist_v10_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.018624 -0.360779"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/wrist_v10_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Sucker_v3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00048753479069489625 4.6767394401792334e-07 0.037314278211390994"/>
+    <mass value="0.1055824682004473"/>
+    <inertia ixx="3.7e-05" ixy="0.0" ixz="0.0" iyy="0.000119" iyz="-0.0" izz="8.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.000474 -0.432679"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/Sucker_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.000474 -0.432679"/>
+    <geometry>
+      <mesh filename="package://robot_arm_description/meshes/Sucker_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="base_link2rotary_plate" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.0408"/>
+  <parent link="base_link"/>
+  <child link="rotary_plate_v56_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+  <limit effort="100" lower="-2.356194" upper="2.356194" velocity="100"/>
+</joint>
+
+<joint name="rotary_plate2upper_arm" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 -0.0351 0.04592"/>
+  <parent link="rotary_plate_v56_1"/>
+  <child link="upper_arm_v25_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <limit effort="100" lower="-1.745329" upper="1.745329" velocity="100"/>
+</joint>
+
+<joint name="upper_arm2elbow" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 0.06055 0.128659"/>
+  <parent link="upper_arm_v25_1"/>
+  <child link="elbow_v35_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+  <limit effort="100" lower="-2.094395" upper="2.094395" velocity="100"/>
+</joint>
+
+<joint name="elbow2forearm" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 -0.025537 -0.0051"/>
+  <parent link="elbow_v35_1"/>
+  <child link="forearm_v19_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+  <limit effort="100" lower="-2.094395" upper="2.094395" velocity="100"/>
+</joint>
+
+<joint name="forearm2wrist" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 0.018711 0.1505"/>
+  <parent link="forearm_v19_1"/>
+  <child link="wrist_v10_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+  <limit effort="100" lower="-1.745329" upper="1.745329" velocity="100"/>
+</joint>
+
+<joint name="wrist2hand" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 -0.01815 0.0719"/>
+  <parent link="wrist_v10_1"/>
+  <child link="Sucker_v3_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+  <limit effort="100" lower="-2.094395" upper="2.094395" velocity="100"/>
+</joint>
+
+</robot>

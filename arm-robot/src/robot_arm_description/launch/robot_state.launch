@@ -1,0 +1,7 @@
+<launch>
+  <arg default="$(find robot_arm_description)/urdf/robot_arm.xacro" name="model"/>
+  <arg default="true" name="gui"/>
+  <param command="$(find xacro)/xacro $(arg model)" name="robot_description"/>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+</launch>

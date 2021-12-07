@@ -1,0 +1,31 @@
+robot_arm_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  base_link2rotary_plate_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: base_link2rotary_plate
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rotary_plate2upper_arm_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rotary_plate2upper_arm
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  upper_arm2elbow_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: upper_arm2elbow
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  elbow2forearm_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: elbow2forearm
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  forearm2wrist_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: forearm2wrist
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  wrist2hand_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: wrist2hand
+    pid: {p: 100.0, i: 0.01, d: 10.0}
